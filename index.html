@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт СПБ архитектура </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Архитектура Санкт-Петербурга</h1>
+        </div>
+    </header>
+
+    <div class="gallery">
+        <h2 class="gallery-title">Галерея</h2>
+        <div class="tabs">
+            <button class="tablink" onclick="openTab(event, 'kazan')">Казанский собор</button>
+            <button class="tablink" onclick="openTab(event, 'hermitage')">Эрмитаж</button>
+            <button class="tablink" onclick="openTab(event, 'admiralty')">Адмиралтейство</button>
+        </div>
+        <div id="kazan" class="tabcontent">
+            <div class="image-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="kazan1.jpg" alt="Казанский собор 1" class="gallery-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Казанский собор</h3>
+                            <p>Казанский собор — один из самых известных соборов в Санкт-Петербурге.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="kazan2.jpg" alt="Казанский собор 2" class="gallery-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Казанский собор</h3>
+                            <p>Казанский собор был построен в 1801-1811 годах.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hermitage" class="tabcontent" style="display:none;">
+            <div class="image-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="hermitage1.jpg" alt="Эрмитаж 1" class="gallery-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Эрмитаж</h3>
+                            <p>Эрмитаж — один из крупнейших и старейших музеев искусства и культуры.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="hermitage2.jpg" alt="Эрмитаж 2" class="gallery-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Эрмитаж</h3>
+                            <p>Эрмитаж был основан в 1764 году и открыт для публики в 1852 году.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="admiralty" class="tabcontent" style="display:none;">
+            <div class="image-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="admiralty1.jpg" alt="Адмиралтейство 1" class="gallery-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Адмиралтейство</h3>
+                            <p>Адмиралтейство — историческое здание, расположенное в центре Санкт-Петербурга.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="admiralty2.jpg" alt="Адмиралтейство 2" class="gallery-image">
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Адмиралтейство</h3>
+                            <p>Адмиралтейство было построено в 1704 году и является символом города.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="architecture-info">
+        <h2>Архитектура Санкт-Петербурга</h2>
+        <p>Санкт-Петербург, основанный в 1703 году, стал культурной столицей России и известен своей уникальной архитектурой. Город сочетает в себе элементы различных стилей, включая барокко, классицизм и модерн.</p>
+        <p>Некоторые из самых известных архитектурных памятников города включают:</p>
+        <ul>
+            <li>Эрмитаж — один из крупнейших и старейших музеев искусства и культуры в мире.</li>
+            <li>Собор Святого Исаака — величественное здание с золотым куполом, которое является одним из символов города.</li>
+            <li>Казанский собор — красивый образец неоклассической архитектуры, вдохновленный собором Святого Петра в Риме.</li>
+            <li>Дворцовая площадь — главная площадь города, окруженная великолепными зданиями, включая Зимний дворец.</li>
+        </ul>
+        <p>Архитектура Санкт-Петербурга является важной частью его культурного наследия и привлекает туристов со всего мира.</p>
+    </section>
+
+    <div class="slider">
+        <div class="slides">
+            <img src="slide1.jpg" alt="Слайд 1" style="display: block;">
+            <img src="slide2.jpg" alt="Слайд 2" style="display: none;">
+            <img src="slide3.jpg" alt="Слайд 3" style="display: none;">
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34078.092238292375!2d30.346764394964758!3d59.918686617880155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310b32cbe2e9%3A0x74e032aa0505dfc!2z0JPQvtGB0YPQtNCw0YDRgdGC0LLQtdC90L3Ri9C5INCt0YDQvNC40YLQsNC2!5e0!3m2!1sru!2sru!4v1734089382982!5m2!1sru!2sru" width="100%" height="400px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>   
+    <footer>
+        <h2>Ссылки</h2>
+        <ul>
+            <li><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_(%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3)/" target="_blank">Казанский собор</a></li>
+            <li><a href="https://ru.wikipedia.org/wiki/%D0%AD%D1%80%D0%BC%D0%B8%D1%82%D0%B0%D0%B6/" target="_blank">Эрмитаж</a></li>
+            <li><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B5_%D0%B0%D0%B4%D0%BC%D0%B8%D1%80%D0%B0%D0%BB%D1%82%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%BE" target="_blank">Главное Адмиралтейство</a></li>
+            <p>© 2024 Ваш сайт. Все права защищены.</p>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
