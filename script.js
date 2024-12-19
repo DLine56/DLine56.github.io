@@ -45,3 +45,29 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block"; // Показать выбранный таб
     evt.currentTarget.className += " active"; // Добавить класс активной вкладки
 }
+
+// Добавляем обработчики событий для касания (для мобильных устройств)
+document.querySelector('.slides').addEventListener('touchstart', handleTouchStart, false);
+document.querySelector('.slides').addEventListener('touchmove', handleTouchMove, false);
+
+let xDown = null;
+
+function handleTouchStart(evt) {
+    const firstTouch = evt.touches[0];
+    xDown = firstTouch.clientX;
+}
+
+function handleTouchMove(evt) {
+    if (!xDown) {
+        return;
+    }
+
+    let xUp = evt.touches[0].clientX;
+    let xDiff = xDown - xUp;
+
+    if (Math.abs(xDiff) > 0) {
+        clearInterval(autoSlideInterval);
+        changeSlide(xDiff > 0 ? 1 : -1);
+    }
+    xDown = null;
+}
